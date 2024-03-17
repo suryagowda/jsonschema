@@ -1,0 +1,342 @@
+/* Global styles for body */
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  background-color: #222831;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+
+}
+
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  background-color: #007D9C;
+  margin-left: auto;
+  
+  color: rgb(0, 0, 0);
+}
+
+
+
+
+
+.logo img {
+  height: 40px; /* Adjust the size of the logo as needed */
+  margin: 10px;
+}
+
+.title {
+  display: flex;
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  height: 100%; /* Assuming the parent container has a height */
+  margin-right: 10px;
+}
+
+.title h1 {
+  margin: 0;
+  padding-bottom: 0;
+}
+
+
+
+
+
+
+
+
+/* Styles for container */
+.container {
+  position:fixed;
+  top:50%;
+  left:50%;
+  text-align: center;
+  
+  transform: translate(-50%,-50%);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Styles for heading elements */
+h1,h4 {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: x-large;
+  color: #EEEEEE;
+  margin-bottom: 20px;
+  white-space: nowrap;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+/* Styles for nextStepBtn */
+#nextStepBtn {
+  padding: 10px 20px;
+  margin: 0px;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  background-color: #1d1e1f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size:larger;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover styles for nextStepBtn */
+#nextStepBtn:hover {
+  background-color: white;
+  color: #1d1e1f;
+}
+
+/* Styles for hidden class */
+.hidden {
+  display: none;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+}
+
+.editor {
+  display: flex;
+  flex-direction: row;
+  height: 75vh;
+  justify-content: space-between;
+}
+
+.left-half {
+  height: 25vh;
+}
+
+.schema {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  left: 0;
+
+
+}
+
+.instance {
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  right:0
+
+}
+
+
+
+
+.ace-editor {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 60vh;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border: 1px solid #fef3f3; /* Light gray border */
+  border-radius: 5px;
+  font-size: 20px; /* Set the desired font size */
+}
+
+
+
+#result,#result2 {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #4caf50; /* Green result text color */
+}
+
+#error,#error2 {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #eb3a1f; /* Green result text color */
+}
+
+/* Styles for modal */
+.modal {
+  animation: fadeIn 1s ease;
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-height: 80%; /* Limit the maximum height of the modal */
+  overflow-y: auto; /* Enable vertical scrolling */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Styles for modal-content */
+.modal-content {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-weight: 900;
+  font-size: 20px;
+  background-color: #fefefe;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 30px; /* Adjust the height of the modal content */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Styles for close button */
+.close {
+  color: #000000;
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: -10px;
+}
+
+/* Hover and focus styles for close button */
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Styles for btn-12 */
+.btn-12 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #000;
+  background-image: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-size: 100%;
+  font-weight: 900;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  text-transform: uppercase;
+  border-radius: 99rem;
+  border-width: 2px;
+  overflow: hidden;
+  padding: 0.8rem 3rem;
+  position: relative;
+}
+
+/* Styles for btn-12 span */
+.btn-12 span {
+  mix-blend-mode: difference;
+}
+
+/* Styles for ::after and ::before pseudo-elements in btn-12 */
+.btn-12:after, .btn-12:before {
+  background: linear-gradient(90deg, #fff 25%, transparent 0, transparent 50%, #fff 0, #fff 75%, transparent 0);
+  content: "";
+  inset: 0;
+  position: absolute;
+  transform: translateY(var(--progress, 100%));
+  transition: transform 0.2s ease;
+}
+
+/* Styles for ::after pseudo-element in btn-12 */
+.btn-12:after {
+  --progress: -100%;
+  background: linear-gradient(90deg, transparent 0, transparent 25%, #fff 0, #fff 50%, transparent 0, transparent 75%, #fff 0);
+  z-index: -1;
+}
+
+/* Hover styles for ::after and ::before pseudo-elements in btn-12 */
+.btn-12:hover:after, .btn-12:hover:before {
+  --progress: 0;
+}
+
+/* Typing animation for h1 */
+.container h1 {
+  overflow: hidden;
+  border-right: .15em solid orange;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .10em;
+  animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0
+  }
+  to {
+    width: 100%
+  }
+}
+
+/* Typewriter cursor animation */
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent
+  }
+  50% {
+    border-color: orange;
+  }
+}
+
+
+
+
+.button {
+  width: 30%;
+  padding: 12px 25px;
+  margin: 10px;
+  color: #fff;
+  border: 1px solid #121212;
+  background: #121212;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 50px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.button::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  color: #121212;
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+.button:hover {
+  background: #fff;
+  color: #121212;
+}
+.button:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+
+

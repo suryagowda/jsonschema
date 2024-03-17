@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Schema Validator</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="json.svg" alt="JSON Schema Logo">
+        </div>
+        <div class="title">
+            <h1>JSON Schema Validator</h1>
+        </div>
+        
+    </header>
+    <div class="container">
+        <h1>Welcome to JSON Schema Validator:) </h1>
+
+        <button class="btn-12", id="startbtn"><span>Let's Go </span></button>
+
+    </div>
+
+    <div class="step1 hidden">
+        <div class="flex-container">
+            
+            <div class="editor">
+                <div class="schema">
+                    <div id="schemaEditor" class="ace-editor"></div>
+                    <button class="button" id="validateSchemaBtn" onclick="validate()">Validate Schema</button>
+                    <div id="result"></div>
+                    <div id="error"></div>
+                </div>
+                <div class="instance">
+                    <div id="instanceEditor" class="ace-editor"></div>
+                    <button class="button" onclick="validate()">Validata JSON data</button>
+                    <div id="result2"></div>
+                    <div id="error2"></div>
+                </div>
+                
+            </div>
+
+            <div class="left-half">
+                <h4>Step 1 : Validate JSON Schema for Draft 2020-12</h4>
+                
+                <div class="result" id="step1Result"></div> <!-- Pop-up element for step 1 -->
+                
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="step2 hidden">
+        <div class="flex-container">
+            
+            <div class="editor">
+                <div class="schema">
+                    <div id="schemaEditor2" class="ace-editor"></div>
+                    <button class="button" id="validateArraySchemaBtn" onclick="validate()">Validate Schema</button>
+                    <div id="result"></div>
+                    <div id="error"></div>
+                </div>
+                <div class="instance">
+                    <div id="instanceEditor2" class="ace-editor"></div>
+                    <button class="button" onclick="validate()">Validata JSON data</button>
+                    <div id="result2"></div>
+                    <div id="error2"></div>
+                </div>
+                
+            </div>
+
+            <div class="left-half">
+                <h4>Step 2: Validate JSON Schema with Array of type number</h4>
+                
+                <div class="result" id="step2Result"></div> <!-- Pop-up element for step 1 -->
+                
+            </div>
+        </div>
+    </div>
+
+    
+    
+    <!--<div class="step2 hidden">
+        <div class="flex-container">
+            <div class="left-half">
+                <h4>Step 2: Validate JSON Schema with Array of type number</h4>
+                <button class = "btn-12" id="validateArraySchemaBtn" ><span>Validate</span></button>
+                <div class="result" id="step2Result"></div> 
+            </div>
+            <div class="right-half">
+                <div id="editor2" class="code-editor"></div>
+                <div id="errorArea2" class="error-area"></div>
+            </div>
+        </div>
+    </div>-->
+    
+    
+    
+
+    <div id="customAlert" class="modal">
+        <div class="modal-content" id="customAlertContent"> <!-- Added id="customAlertContent" -->
+            <span class="close">&times;</span>
+            <p id="alertMessage"></p>
+            <button id="nextStepBtn">Next Step</button>
+            
+
+
+            
+
+
+            
+        </div>
+    </div>
+
+    <!-- Modal for Step 2 -->
+    <div id="customAlertStep2" class="modal">
+        <div class="modal-content" , id="customAlertContentStep2">
+            <span class="close">&times;</span>
+            <p id="modalMessageStep2"></p>
+        </div>
+    </div>
+    
+    
+  
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.32.7/ace.js" integrity="sha512-oz/97HdPI510jvvYzVqE2tzz+jWpvUeVkK5OT0S2kPZOxuR+9cE8zT1V6UgwtRG71ThICBEtkPEzN5tfP/YeYw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ajv/8.12.0/ajv2020.bundle.js"></script>
+    
+    
+    <script src="script.js"></script>
+</body>
+</html>
